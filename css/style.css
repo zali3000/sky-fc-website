@@ -1,0 +1,505 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #eef2f7;
+}
+
+body {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+header {
+  background: #1e3a8a;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  background: linear-gradient(to right, #1e3a8a, #3b82f6);
+  color: white;
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.about, .highlights {
+  background: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.highlights ul {
+  list-style: none;
+  padding: 0;
+}
+
+.highlights li {
+  padding: 8px 0;
+}
+
+footer {
+  background: #111827;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+/* Players */
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.player-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.player-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.player-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Fixtures table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background: #1e3a8a;
+  color: white;
+}
+
+/* Mobile Navigation */
+@media (max-width: 600px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero {
+    padding: 40px 15px;
+  }
+}
+.live-match {
+  background: #1e40af;
+  color: white;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.gallery {
+  margin: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  padding: 15px;
+}
+
+.gallery-grid img,
+.gallery-grid video {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+  display: block;
+  margin: auto;
+  max-width: 90%;
+  max-height: 90%;
+  margin-top: 5%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+.reveal {
+  animation: slideUp 0.8s ease forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.contact {
+  background: white;
+  margin: 20px;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.contact h2 {
+  text-align: center;
+}
+
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.contact textarea {
+  resize: none;
+  height: 120px;
+}
+
+.contact button {
+  width: 100%;
+  padding: 12px;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.contact button:hover {
+  background: #2563eb;
+}
+
+#formMessage {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 55px;
+  text-decoration: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+}
+header .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+header .logo {
+  width: 60px;  /* adjust size */
+  height: auto;
+  border-radius: 8px;
+}
+@media (max-width: 600px) {
+  header .header-container {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  header .logo {
+    width: 50px;
+  }
+}
+header .header-container a {
+  display: inline-block;
+}
+
+header .header-container a:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+.gallery-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.gallery-buttons button {
+  margin: 5px;
+  padding: 10px 15px;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background0.3s;
+}
+
+.gallery-buttons button:hover {
+  background: #2563eb;
+}
+.gallery-video {
+  width: 100%;
+  max-height: 250px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.gallery-video:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
+}
+/* Modal media container */
+#mediaModal .modal-content img,
+#mediaModal .modal-content video {
+  max-height: 90vh;
+  border-radius: 10px;
+}
+
+/* Ensure video fits nicely */
+#mediaModal .modal-content video {
+  object-fit: contain;
+}
+.gallery-btn {
+  margin: 5px;
+  padding: 10px 15px;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background0.3s, transform 0.2s;
+}
+
+.gallery-btn:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+}
+
+.active-btn {
+  background: #f59e0b; /* highlight color */
+  color: white;
+  transform: scale(1.05);
+}
+.home-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  padding: 60px 10%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.home-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  border-radius: 12px;
+  color: white;
+}
+
+.home-box h2 {
+  color: #f59e0b;
+  margin-bottom: 10px;
+}
+
+.home-box p {
+  line-height: 1.7;
+}
+
+.home-cta {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+}
+
+.home-cta h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.home-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  background: #f59e0b;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.cta-btn:hover {
+  background: #fbbf24;
+  transform: scale(1.1);
+}
+/* Fade-in animation */
+.fade-in {
+  opacity: 1;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero text animation */
+.hero h1 {
+  animation: slideDown 1.5s ease;
+}
+
+.hero p {
+  animation: fadeUp 2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Make all images & videos responsive */
+img,
+video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+
+  .gallery-grid img,
+  .gallery-grid video {
+    height: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-grid img,
+  .gallery-grid video {
+    height: 120px;
+  }
+}
+.modal img,
+.modal video {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+
+
+
+

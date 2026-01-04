@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sky FC | Gallery</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <a href="index.html"><img src="images//logos/WhatsApp Image 2025-12-30 at 20.31.27.jpeg" alt="Sky FC Logo" class="logo"></a>
+    <h1>⚽ Sky FC</h1>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="players.html">Members</a>
+    <a href="fixtures.html">Fixtures</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="gallery">
+  <h2>Sky FC Gallery</h2>
+
+  <!-- Gallery Section Buttons -->
+  <div class="gallery-buttons">
+  <button class="gallery-btn" onclick="showSection('matches')">Matches</button>
+  <button class="gallery-btn" onclick="showSection('training')">Training</button>
+  <button class="gallery-btn" onclick="showSection('players')">Players</button>
+</div>
+
+
+  <!-- Gallery Container -->
+  <div id="gallery-container" class="gallery-grid"></div>
+</section>
+
+<a
+  href="https://wa.me/2349036503723?text=Hello%20Sky%20FC!%20I%20want%20to%20know%20more%20about%20the%20team."
+  class="whatsapp-float"
+  target="_blank"
+>
+  💬
+</a>
+
+
+<!-- Media Modal -->
+<div id="mediaModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <div id="modalContent"></div>
+</div>
+
+
+<script src="js/script.js"></script>
+
+
+<footer>
+  <p>© 2025 Sky FC</p>
+</footer>
+
+</body>
+</html>
